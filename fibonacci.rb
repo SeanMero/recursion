@@ -1,5 +1,3 @@
-require 'pry-byebug'
-
 # create an array of the first n Fibonacci numbers iteratively.
 # n must be a positive integer.
 def fibs(n)
