@@ -1,3 +1,5 @@
+require 'prime'
+
 # find the sum of all numbers less than n that are multiples of 3 or 5
 def multiples(n)
   answer = []
@@ -19,10 +21,16 @@ end
 
 # sum even Fibonacci numbers up to n
 def even_fibs(n, sum = 0)
-
   n.times do |i|
     sum += fibs_rec(i) if fibs_rec(i) % 2 == 0
     break if fibs_rec(i) > n
   end
   sum
 end
+
+# find the largest prime factor of a given number
+def largest_prime_factor(n)
+  Prime.prime_division(n).max[0]
+end
+
+puts largest_prime_factor(600851475143)
